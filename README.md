@@ -1,4 +1,4 @@
-# API PARA CADASTRO E PROGRAMAÇÃO DE VIAGENS
+ins# API PARA CADASTRO E PROGRAMAÇÃO DE VIAGENS
 
 API criada com o intuíto de ser consumida por um front-end para fazer o cadastro de viagens, convite de amigos, organização de passeios e links importantes.Irei separar em 4 tópicos que conterão seus sub-tópicos com as chamadas da API.
 
@@ -94,3 +94,76 @@ RESPONSE:{
 
 ## PARTICIPANTES
 ### Convidar participantes:
+
+METHOD: POST.
+
+URL: localhost:8080/trips/*id da viagem*/invite
+
+BODY: {
+  "email": "email do convidado"
+}
+
+RESPONSE:{
+	"id": "id do convidado"
+}
+
+![image](https://github.com/user-attachments/assets/f6962578-5534-43fd-9c88-6d87a38d901d)
+
+### Confirmar participantes:
+
+METHOD: POST.
+
+URL: localhost:8080/participants/*id do participante*/confirm
+
+BODY: {
+  "name": "nome do participante"
+}
+
+RESPONSE:{
+	"id": "cb61a25c-93d9-4faa-9d1f-d18bb116c7b2",
+	"isConfirmed": true,
+	"name": "Nome participante",
+	"email": "email do participante",
+	"trip": {
+		"id": "a64e6311-9d47-43d3-a07c-c606958c9db1",
+		"destination": "Maragogi - AL",
+		"startsAt": "2024-08-01T00:00:00",
+		"endsAt": "2024-05-15T21:51:54.7342",
+		"isConfirmed": true,
+		"ownerName": "seu nome",
+		"ownerEmail": "seu email"
+	}
+}
+
+![image](https://github.com/user-attachments/assets/a5f67f8a-d97b-447c-94fe-bd337bcaf8c4)
+
+### Recuperar informações de participantes:
+
+METHOD: GET.
+
+URL: localhost:8080/trips/*id do participante*/participants
+
+BODY: vazio
+
+RESPONSE:[
+	{
+		"id": "id participante 1",
+		"name": "nome participante 1",
+		"email": "email participante 1",
+		"isConfirmed": true or false
+	},
+	{
+		"id": "id participante 2",
+		"name": "nome participante 2",
+		"email": "email participante 2",
+		"isConfirmed": true or false
+	},
+	{
+		"id": "id participante 3",
+		"name": "nome participante 3",
+		"email": "email participante 3",
+		"isConfirmed": true or false
+	}
+]
+
+![image](https://github.com/user-attachments/assets/97f90397-b7fa-4619-a624-74d90315f407)
