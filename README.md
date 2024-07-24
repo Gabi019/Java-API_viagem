@@ -167,3 +167,75 @@ RESPONSE:[
 ]
 
 ![image](https://github.com/user-attachments/assets/97f90397-b7fa-4619-a624-74d90315f407)
+
+## ATIVIDADES
+### Registrar Atividade:
+
+METHOD: POST.
+
+URL: localhost:8080/trips/*id da viagem*/activities
+
+BODY: {
+  "title": "nome da atividade",
+  "occurs_at": "2024-06-25T21:51:54.7342"
+}
+
+RESPONSE:{
+	"activityId": "id da atividade"
+}
+
+![image](https://github.com/user-attachments/assets/5009be21-354f-466c-bb8b-6f372452be3d)
+
+### Recuperar Atividades da Viagem:
+
+METHOD: GET.
+
+URL: localhost:8080/trips/*id da viagem*/activities
+
+BODY: vazio
+
+RESPONSE:[
+	{
+		"id": "id da atividade",
+		"title": "nome da atividade",
+		"occursAt": "data da atividade"
+	}
+]
+
+![image](https://github.com/user-attachments/assets/d7feded6-bf88-4e62-af5b-0dfde029de71)
+
+## LINKS
+### Registrar Link:
+
+METHOD: POST.
+
+URL: localhost:8080/trips/*id da viagem*/links
+
+BODY: {
+  "title": "nome do link",
+  "url": "url"
+}
+
+RESPONSE:{
+	"linkId": "id do link"
+}
+
+![image](https://github.com/user-attachments/assets/7b593cc9-cf58-446d-b669-b99fd95a2e45)
+
+### Registrar Link:
+
+METHOD: GET.
+
+URL: localhost:8080/trips/*id da viagem*/links
+
+BODY: vazio
+
+RESPONSE:[
+	{
+		"id": "id do link",
+		"title": "nome do link",
+		"url": "url"
+	}
+]
+
+![image](https://github.com/user-attachments/assets/a0620b5f-ee32-4056-80fc-530132bc20a0)
