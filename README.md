@@ -1,4 +1,4 @@
-ins# API PARA CADASTRO E PROGRAMAÇÃO DE VIAGENS
+# API PARA CADASTRO E PROGRAMAÇÃO DE VIAGENS
 
 API criada com o intuíto de ser consumida por um front-end para fazer o cadastro de viagens, convite de amigos, organização de passeios e links importantes.Irei separar em 4 tópicos que conterão seus sub-tópicos com as chamadas da API.
 
